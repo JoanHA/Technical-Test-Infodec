@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Historicals extends Model
 {
     protected $table = "historicals";
-    protected $fillable =["country_id","city_id","budget_cop","budget_changed","weather","rate"];
+    protected $fillable =["country","city","budget_cop","budget_changed","weather","rate"];
 }

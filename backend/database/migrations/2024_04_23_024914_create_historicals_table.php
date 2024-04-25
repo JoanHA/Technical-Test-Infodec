@@ -13,14 +13,8 @@ return new class extends Migration
     {
         Schema::create('historicals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('country_id')
-                ->constrained(table: 'countries', indexName: 'historical_country_id')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-            $table->foreignId('city_id')
-                ->constrained(table: 'cities', indexName: 'historical_city_id')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+            $table->string("country");
+            $table->string("city");
             $table->longText("budget_cop");
             $table->longText("budget_changed");
             $table->string("weather",50);

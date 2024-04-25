@@ -22,8 +22,8 @@ class SaveHistoricalRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'country_id'=> 'required',
-            'city_id'=> 'required',
+            'country'=>'required',
+            'city'=> 'required',
             'budget_cop'=> 'required',
             'budget_changed'=> 'required',
             'weather'=> 'required',

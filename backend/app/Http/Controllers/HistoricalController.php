@@ -24,8 +24,8 @@ class HistoricalController extends Controller
      */
     public function store(SaveHistoricalRequest $request):JsonResponse
     {
+       
         $historical =  Historicals::create($request->validated());
-
         return response()->json($historical, Response::HTTP_CREATED);
     }
 

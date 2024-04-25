@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "fb5b99cc-b75e-436a-b4c3-a718f9195d93",
+		"name": "API services",
+		"description": "Verify if the weather API and money converter API are working",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34510594"
+	},
+	"item": [
+		{
+			"name": "OpenWeather API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"country_id\":1,\n     \"city_id\":1,\n     \"budget_cop\":\"$1000\",\n     \"budget_changed\": \"ł5000\",\n     \"weather\":\"4.0°C\",\n     \"rate\":10.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?lat=55.67594&lon=12.56553&exclude=hourly,daily&appid=4089cc22f2c9dd133a520fb62eb195ce&units=metric",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "55.67594"
+						},
+						{
+							"key": "lon",
+							"value": "12.56553"
+						},
+						{
+							"key": "exclude",
+							"value": "hourly,daily"
+						},
+						{
+							"key": "appid",
+							"value": "4089cc22f2c9dd133a520fb62eb195ce"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExchangeRate API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/21453268cce040c78064b33b/pair/COP/GBP/1000",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"21453268cce040c78064b33b",
+						"pair",
+						"COP",
+						"GBP",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
